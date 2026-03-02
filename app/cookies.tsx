@@ -18,7 +18,7 @@ const cookies = () => {
             <MaterialCommunityIcons 
                 name="cookie"
                 size={200}
-                color="black"
+                color="white"
                 style={styles.iconImage} 
             />
             
@@ -58,6 +58,7 @@ export default cookies
 const styles = StyleSheet.create({
     safeView: {
         flex: 1,
+        backgroundColor: 'black',
     },
     mainContainer: {
         flex: 1,
@@ -88,6 +89,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginBottom: 20,
         textAlign: 'center',
+        color: 'white',
     },
     buttonRow: {
         flexDirection: 'row',

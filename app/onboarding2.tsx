@@ -18,7 +18,7 @@ const onboarding2 = () => {
             <MaterialCommunityIcons 
                 name="book-open-page-variant" 
                 size={200} 
-                color="black" 
+                color="white" 
                 style={styles.iconImage} 
             />
             
@@ -47,6 +47,7 @@ export default onboarding2
 const styles = StyleSheet.create({
     safeView: {
         flex: 1,
+        backgroundColor: 'black',
     },
     mainContainer: {
         flex: 1,
@@ -72,5 +73,6 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginBottom: 20,
         textAlign: 'center',
+        color: 'white',
     },
 })

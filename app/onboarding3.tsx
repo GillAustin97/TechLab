@@ -18,11 +18,11 @@ const onboarding3 = () => {
             <MaterialCommunityIcons 
                 name="map-search-outline"
                 size={200}
-                color="black"
+                color="white"
                 style={styles.iconImage} 
             />
             
-            <Text style={styles.titleText}>Find local computer components</Text>
+            <Text style={styles.titleText}>Find local Computer Components</Text>
     
 
             <Button style={styles.nextButton}
@@ -47,6 +47,7 @@ export default onboarding3
 const styles = StyleSheet.create({
     safeView: {
         flex: 1,
+        backgroundColor: 'black',
     },
     mainContainer: {
         flex: 1,
@@ -72,5 +73,6 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginBottom: 20,
         textAlign: 'center',
+        color: 'white',
     },  
 })

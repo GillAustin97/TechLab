@@ -18,7 +18,7 @@ const onboarding1 = () => {
             <MaterialCommunityIcons 
                 name="robot" 
                 size={200} 
-                color="black" 
+                color="white" 
                 style={styles.iconImage} 
             />
 
@@ -46,6 +46,7 @@ export default onboarding1
 const styles = StyleSheet.create({
     safeView: {
         flex: 1,
+        backgroundColor: 'black',
     },
     mainContainer: {
         flex: 1,
@@ -70,5 +71,6 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginBottom: 20,
         textAlign: 'center',
+        color: 'white',
     },
 })
