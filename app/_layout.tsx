@@ -50,7 +50,10 @@ function RootLayoutNav() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
+      <Stack 
+      screenOptions={{
+        animation: 'fade_from_bottom',
+      }}>
         <Stack.Screen name="onboarding1" options={{ headerShown: false }} />
         <Stack.Screen name="onboarding2" options={{ headerShown: false }} />
         <Stack.Screen name="onboarding3" options={{ headerShown: false }} />
