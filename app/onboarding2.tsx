@@ -1,10 +1,11 @@
 import { StyleSheet, Text, View, Button, Pressable } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { Router } from 'expo-router'
+import { Router, useRouter } from 'expo-router'
 import { navigate } from 'expo-router/build/global-state/routing'
 
 const onboarding2 = () => {
+    const router = useRouter()
   return (
     <SafeAreaView style={styles.safeView}>
         <View>
@@ -15,7 +16,7 @@ const onboarding2 = () => {
                 <Button
                 title="Next"
                 onPress={() =>
-                    navigate('/onboarding3')
+                    router.push('/onboarding3')
                 }
                 />
             </View>

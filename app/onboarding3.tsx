@@ -1,9 +1,12 @@
 import { StyleSheet, Text, View, Button, Pressable } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import React from 'react'
-import { Router } from 'expo-router'
+import { Router, useRouter } from 'expo-router'
 import { navigate } from 'expo-router/build/global-state/routing'
+
 const onboarding3 = () => {
+    const router = useRouter()
+    
   return (
     <SafeAreaView style={styles.safeView}>
         <View>
@@ -14,7 +17,7 @@ const onboarding3 = () => {
               <Button 
                 title="Polices and Cookies"
                 onPress={() => {
-                    navigate('/cookies')
+                    router.push('/cookies')
                 }}
               />
             </View>
