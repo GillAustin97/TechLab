@@ -15,6 +15,13 @@ const onboarding2 = () => {
 
         <View style={styles.mainContainer}>
 
+            <MaterialCommunityIcons 
+                name="account" 
+                size={100} 
+                color="black" 
+                style={styles.iconImage} 
+            />
+            
             <Text>onboarding2</Text>
     
 
@@ -52,6 +59,13 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         marginBottom: 20,
         marginTop: 20,
+        position: 'absolute',
+        bottom: 20,
+    },
+    iconImage: {
+        width: 100,
+        height: 100,
+        marginBottom: 20,
     },
     
 })

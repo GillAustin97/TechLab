@@ -14,9 +14,15 @@ const onboarding1 = () => {
     <SafeAreaView style={styles.safeView}>
 
         <View style={styles.mainContainer}>
+            
+            <MaterialCommunityIcons 
+                name="account" 
+                size={100} 
+                color="black" 
+                style={styles.iconImage} 
+            />
 
             <Text>onboarding1</Text>
-    
 
             <Button style={styles.nextButton}
                 mode="contained"
@@ -52,6 +58,13 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         marginBottom: 20,
         marginTop: 20,
+        position: 'absolute',
+        bottom: 20,
+    },
+    iconImage: {
+        width: 100,
+        height: 100,
+        marginBottom: 20,
     },
     
 })
