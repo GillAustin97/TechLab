@@ -12,7 +12,8 @@ const onboarding1 = () => {
     
   return (
     <SafeAreaView style={styles.safeView}>
-        <View>
+
+        <View style={styles.mainContainer}>
 
             <Text>onboarding1</Text>
     
@@ -29,6 +30,7 @@ const onboarding1 = () => {
     
 
          </View>
+
     </SafeAreaView>
   )
 }
@@ -38,6 +40,9 @@ export default onboarding1
 const styles = StyleSheet.create({
     safeView: {
         flex: 1,
+    },
+    mainContainer: {
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -45,6 +50,8 @@ const styles = StyleSheet.create({
         width: 300,
         height: 50,
         borderRadius: 5,
+        marginBottom: 20,
+        marginTop: 20,
     },
     
 })
