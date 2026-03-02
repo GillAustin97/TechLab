@@ -72,5 +72,6 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         textAlign: 'center',
         color: 'white',
+        paddingHorizontal: 20,
     },
 })

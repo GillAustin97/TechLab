@@ -22,7 +22,7 @@ const onboarding3 = () => {
                 style={styles.iconImage} 
             />
             
-            <Text style={styles.titleText}>Find local Computer Components</Text>
+            <Text style={styles.titleText}>Find local Computer Components near your location</Text>
     
 
             <Button style={styles.nextButton}
@@ -74,5 +74,6 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         textAlign: 'center',
         color: 'white',
+        paddingHorizontal: 20,
     },  
 })

@@ -22,7 +22,7 @@ const onboarding2 = () => {
                 style={styles.iconImage} 
             />
             
-            <Text style={styles.titleText}> Access to Computer Manuals</Text>
+            <Text style={styles.titleText}> Access to a wide variety of Computer Manuals</Text>
     
 
             <Button style={styles.nextButton}
@@ -74,5 +74,6 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         textAlign: 'center',
         color: 'white',
+        paddingHorizontal: 20,
     },
 })
