@@ -1,18 +1,54 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Pressable } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { Router } from 'expo-router'
+import { router, Router, useRouter } from 'expo-router'
+import { navigate } from 'expo-router/build/global-state/routing'
+import { MaterialCommunityIcons } from '@expo/vector-icons'
+import { Button } from 'react-native-paper'
 
 const cookies = () => {
+
+    const router = useRouter()
+    
   return (
     <SafeAreaView style={styles.safeView}>
-            <View>
-                <Text>onboarding3</Text>
-        
-        
+
+        <View style={styles.mainContainer}>
+
+            <MaterialCommunityIcons 
+                name="cookie"
+                size={200}
+                color="black"
+                style={styles.iconImage} 
+            />
+            
+            <Text style={styles.titleText}>Terms and Conditions</Text>
+    
+            <View style={styles.buttonRow}>
                 
-         
+                <Button style={styles.declineButton}
+                    mode="contained"
+                    buttonColor='gray'
+                    onPress={() => {
+                        router.push('/onboarding1')
+                    }}
+                >
+                    Decline
+                </Button>
+
+                <Button style={styles.nextButton}
+                    mode="contained"
+                    buttonColor='red'
+                    onPress={() => {
+                        router.push('/login')
+                    }}
+                >
+                    Accept
+                </Button>
             </View>
+
+         </View>
+
     </SafeAreaView>
   )
 }
@@ -22,12 +58,43 @@ export default cookies
 const styles = StyleSheet.create({
     safeView: {
         flex: 1,
+    },
+    mainContainer: {
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
     },
     nextButton: {
-        width: 200,
+        width: 150,
         height: 50,
-        borderRadius: 25,
+        borderRadius: 5,
+        marginBottom: 20,
+        marginTop: 20,
+    },
+    declineButton: {
+        width: 150,
+        height: 50,
+        borderRadius: 5,
+        marginBottom: 20,
+        marginTop: 20,
+    },
+    iconImage: {
+        position: 'absolute',
+        top: 100,
+        marginBottom: 20,
+    },
+    titleText: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginBottom: 20,
+        textAlign: 'center',
+    },
+    buttonRow: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        width: '100%',
+        paddingHorizontal: 30,
+        position: 'absolute',
+        bottom: 20,
     },
 })
