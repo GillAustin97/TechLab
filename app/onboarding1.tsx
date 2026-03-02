@@ -22,7 +22,7 @@ const onboarding1 = () => {
                 style={styles.iconImage} 
             />
 
-            <Text>AI Computer Repair Bot</Text>
+            <Text style={styles.titleText}>Chat with a Expert Computer Repair Bot</Text>
 
             <Button style={styles.nextButton}
                 mode="contained"
@@ -64,6 +64,11 @@ const styles = StyleSheet.create({
     iconImage: {
         position: 'absolute',
         top: 100,
+    },
+    titleText: {
+        fontSize: 24,
+        fontWeight: 'bold',
         marginBottom: 20,
+        textAlign: 'center',
     },
 })

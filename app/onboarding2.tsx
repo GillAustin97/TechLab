@@ -22,7 +22,7 @@ const onboarding2 = () => {
                 style={styles.iconImage} 
             />
             
-            <Text>Computer Manuals</Text>
+            <Text style={styles.titleText}> Access to Computer Manuals</Text>
     
 
             <Button style={styles.nextButton}
@@ -66,5 +66,11 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: 100,
         marginBottom: 20,
-    }, 
+    },
+    titleText: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginBottom: 20,
+        textAlign: 'center',
+    },
 })

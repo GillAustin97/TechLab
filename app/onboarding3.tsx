@@ -16,13 +16,13 @@ const onboarding3 = () => {
         <View style={styles.mainContainer}>
 
             <MaterialCommunityIcons 
-                name="chip"
+                name="map-search-outline"
                 size={200}
-                color="black" 
+                color="black"
                 style={styles.iconImage} 
             />
             
-            <Text>Computer Components</Text>
+            <Text style={styles.titleText}>Find local computer components</Text>
     
 
             <Button style={styles.nextButton}
@@ -66,5 +66,11 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: 100,
         marginBottom: 20,
+    },
+    titleText: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginBottom: 20,
+        textAlign: 'center',
     },  
 })
