@@ -16,13 +16,13 @@ const onboarding1 = () => {
         <View style={styles.mainContainer}>
             
             <MaterialCommunityIcons 
-                name="account" 
-                size={100} 
+                name="robot" 
+                size={200} 
                 color="black" 
                 style={styles.iconImage} 
             />
 
-            <Text>onboarding1</Text>
+            <Text>AI Computer Repair Bot</Text>
 
             <Button style={styles.nextButton}
                 mode="contained"
@@ -62,9 +62,8 @@ const styles = StyleSheet.create({
         bottom: 20,
     },
     iconImage: {
-        width: 100,
-        height: 100,
+        position: 'absolute',
+        top: 100,
         marginBottom: 20,
     },
-    
 })
