@@ -24,6 +24,12 @@ const onboarding1 = () => {
 
             <Text style={styles.titleText}>Chat with a Expert Computer Repair Bot</Text>
 
+            <View style={styles.squaresRow}>
+                <View style={styles.squares} />
+                <View style={styles.squaresEmpty} />
+                <View style={styles.squaresEmpty} />
+            </View>
+
             <Button style={styles.nextButton}
                 mode="contained"
                 buttonColor='red'
@@ -73,5 +79,26 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: 'white',
         paddingHorizontal: 20,
+    },
+    squaresRow: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        bottom: 120,
+    },
+    squares: {
+        width: 10,
+        height: 10,
+        backgroundColor: 'white',
+        marginHorizontal: 5,
+        borderRadius: 2,
+    },
+    squaresEmpty: {
+        width: 10,
+        height: 10,
+        backgroundColor: 'gray',
+        marginHorizontal: 5,
+        borderRadius: 2,
     },
 })

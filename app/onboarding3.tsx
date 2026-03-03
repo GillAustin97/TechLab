@@ -23,7 +23,12 @@ const onboarding3 = () => {
             />
             
             <Text style={styles.titleText}>Find local Computer Components near your location</Text>
-    
+
+            <View style={styles.squaresRow}>
+                <View style={styles.squaresEmpty} />
+                <View style={styles.squaresEmpty} />
+                <View style={styles.squares} />
+            </View>
 
             <Button style={styles.nextButton}
                 mode="contained"
@@ -75,5 +80,26 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: 'white',
         paddingHorizontal: 20,
-    },  
+    },
+    squaresRow: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        bottom: 120,
+    },
+    squares: {
+        width: 10,
+        height: 10,
+        backgroundColor: 'white',
+        marginHorizontal: 5,
+        borderRadius: 2,
+    },
+    squaresEmpty: {
+        width: 10,
+        height: 10,
+        backgroundColor: 'gray',
+        marginHorizontal: 5,
+        borderRadius: 2,
+    },
 })
