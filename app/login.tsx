@@ -14,8 +14,6 @@ const login = () => {
 
         <Image source={require('../assets/images/techLab_logo.png')} style={styles.imageContainer} />
 
-        <Text style={styles.titleText}>Login</Text>
-
         <TextInput
           style={styles.usernameLogin}
           placeholder="Username"
@@ -39,6 +37,12 @@ const login = () => {
           <Text style={styles.signUpButtonText}>Sign Up</Text>
         </TouchableOpacity>
 
+        <TouchableOpacity
+          style={styles.signInGoogleButton}
+          onPress={() => router.push('./')}>
+          <Text style={styles.signInGoogleButtonText}>Sign in with Google</Text>
+        </TouchableOpacity>
+
       </View>
     </SafeAreaView>
   )
@@ -57,10 +61,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     imageContainer: {
-        position: 'absolute',
-        top: 50,
         width: 400,
         height: 300,
+        marginBottom: 10,
     },
     titleText: {
         fontSize: 24,
@@ -71,7 +74,6 @@ const styles = StyleSheet.create({
         height: 50,
         borderRadius: 5,
         marginBottom: 20,
-        marginTop: 20,
         backgroundColor: 'white',
         paddingHorizontal: 20,
     },
@@ -106,6 +108,20 @@ const styles = StyleSheet.create({
     },
     signUpButtonText: {
         color: 'white',
+        fontSize: 18,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        lineHeight: 50,
+    },
+    signInGoogleButton: {
+        width: 250,
+        height: 50,
+        borderRadius: 25,
+        marginBottom: 20,
+        backgroundColor: 'white',
+    },
+    signInGoogleButtonText: {
+        color: 'gray',
         fontSize: 18,
         fontWeight: 'bold',
         textAlign: 'center',
