@@ -1,8 +1,10 @@
+import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { useRouter } from 'expo-router'
 import React from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { TextInput } from 'react-native-paper'
 import { SafeAreaView } from 'react-native-safe-area-context'
+
 
 const login = () => {
 
@@ -37,10 +39,20 @@ const login = () => {
           <Text style={styles.signUpButtonText}>Sign Up</Text>
         </TouchableOpacity>
 
+        <Text style={styles.orText}>or</Text>
+
         <TouchableOpacity
           style={styles.signInGoogleButton}
           onPress={() => router.push('./')}>
-          <Text style={styles.signInGoogleButtonText}>Sign in with Google</Text>
+          <Image source={require('../assets/images/googleIcon.png')} style={styles.signInGoogleButtonIcon} />
+          <Text style={styles.signInGoogleButtonText}>Connect with Google</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.signInFacebookButton}
+          onPress={() => router.push('./')}>
+          <Image source={require('../assets/images/facebookIcon.png')} style={styles.signInFacebookButtonIcon} />
+          <Text style={styles.signInFacebookButtonText}>Connect with Facebook</Text>
         </TouchableOpacity>
 
       </View>
@@ -57,8 +69,9 @@ const styles = StyleSheet.create({
     },
     mainContainer: {
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
+        paddingTop: 50,
     },
     imageContainer: {
         width: 400,
@@ -119,6 +132,9 @@ const styles = StyleSheet.create({
         borderRadius: 25,
         marginBottom: 20,
         backgroundColor: 'white',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     signInGoogleButtonText: {
         color: 'gray',
@@ -126,5 +142,46 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
         lineHeight: 50,
+        alignContent: 'center',
+        marginLeft: 10,
+    },
+    signInGoogleButtonIcon: {
+        width: 30,
+        height: 30,
+        position: 'absolute',
+        left: 10,
+        top: 10,
+    },
+    signInFacebookButton: {
+        width: 250,
+        height: 50,
+        borderRadius: 5,
+        marginBottom: 20,
+        backgroundColor: '#4267B2',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    signInFacebookButtonText: {
+        color: 'white',
+        fontSize: 18,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        lineHeight: 50,
+        alignContent: 'center',
+        marginLeft: 25,
+    },
+    signInFacebookButtonIcon: {
+        width: 30,
+        height: 30,
+        position: 'absolute',
+        left: 10,
+        top: 10,
+    },
+    orText: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: 'white',
+        marginBottom: 20,
     },
 })
