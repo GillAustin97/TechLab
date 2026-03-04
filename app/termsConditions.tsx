@@ -16,7 +16,7 @@ const termsConditions = () => {
         <View style={styles.mainContainer}>
 
             <MaterialCommunityIcons 
-                name="cookie"
+                name="file-document-outline"
                 size={250}
                 color="white"
                 style={styles.iconImage} 
