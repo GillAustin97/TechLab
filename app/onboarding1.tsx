@@ -33,6 +33,8 @@ const onboarding1 = () => {
             <Button style={styles.nextButton}
                 mode="contained"
                 buttonColor='red'
+                textColor='white'
+                labelStyle={{ fontSize: 20 }}
                 onPress={() => {
                     router.push('/onboarding2')
                 }}

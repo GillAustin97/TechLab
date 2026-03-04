@@ -2,10 +2,11 @@ import { useRouter } from 'expo-router'
 import React from 'react'
 import { StyleSheet, TouchableOpacity, View, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { Card, Text, List, Divider} from 'react-native-paper'
+import { Card, Text, List, Divider, Searchbar} from 'react-native-paper'
 
 const settings = () => {
   const router = useRouter()
+  const [searchQuery, setSearchQuery] = React.useState('');
 
   return (
     <SafeAreaView style={styles.safeView}>
@@ -19,6 +20,16 @@ const settings = () => {
               left={props => <List.Icon {...props} icon="account" />}
               right={props => <List.Icon {...props} icon="chevron-right" />}
               onPress={() => router.push('/techlabAccount')}
+            />
+
+            <Divider style={styles.dividerLine} />
+
+            <List.Item
+              title="My Devices "
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="devices" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/mydevices')}
             />
           </Card>
 
@@ -42,7 +53,7 @@ const settings = () => {
             />
 
             <Divider style={styles.dividerLine} />
-            
+
             <List.Item
               title="Notifications"
               titleStyle={{ color: 'white' }}
@@ -64,11 +75,18 @@ const settings = () => {
 
           </Card>
 
-        
-
-
-
         </ScrollView>
+
+
+        <Searchbar
+          placeholder="Search"
+          style={styles.searchbarContainer}
+          onChangeText={setSearchQuery}
+          value={searchQuery}
+          inputStyle={{ color: 'white' }}
+          right={props => <List.Icon {...props} icon="microphone" />}
+        />
+
       </View>
     </SafeAreaView>
   )
@@ -120,6 +138,12 @@ const styles = StyleSheet.create({
   notificationsCard: {
     width: 375,
     marginBottom: 20,
+    backgroundColor: '#1C1C1E',
+  },
+  searchbarContainer: {
+    width: 375,
+    borderRadius: 25,
+    marginBottom: 2,
     backgroundColor: '#1C1C1E',
   },
 })

@@ -57,11 +57,27 @@ function RootLayoutNav() {
         <Stack.Screen name="onboarding1" options={{ headerShown: false }} />
         <Stack.Screen name="onboarding2" options={{ headerShown: false }} />
         <Stack.Screen name="onboarding3" options={{ headerShown: false }} />
+        <Stack.Screen name="termsConditions" options={{ headerShown: false }} />
         <Stack.Screen name="login" options={{ headerShown: false }} />
 
-        <Stack.Screen name="termsConditions" options={{ headerShown: false }} />
-
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+
+        <Stack.Screen name="maps" options={{ headerShown: false }} />
+
+        <Stack.Screen name="manuals" options={{ headerShown: false }} />
+
+        <Stack.Screen name="atlas" options={{ headerShown: false }} />
+
+        <Stack.Screen name="settings" options={{ headerShown: false }} />
+        <Stack.Screen name="techlabAccount" options={{ headerShown: false }} />
+        <Stack.Screen name="softwareUpdates" options={{ headerShown: false }} />
+        <Stack.Screen name="atlasAI" options={{ headerShown: false }} />
+        <Stack.Screen name="sounds" options={{ headerShown: false }} />
+        <Stack.Screen name="notifications" options={{ headerShown: false }} />
+        <Stack.Screen name="mydevices" options={{ headerShown: false }} />
+    
+        
+
       </Stack>
     </ThemeProvider>
   );
