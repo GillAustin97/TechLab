@@ -34,7 +34,7 @@ const onboarding3 = () => {
                 mode="contained"
                 buttonColor='red'
                 onPress={() => {
-                    router.push('/cookies')
+                    router.push('/termsConditions')
                 }}
             >
                 Next

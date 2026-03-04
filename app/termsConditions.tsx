@@ -6,7 +6,7 @@ import { navigate } from 'expo-router/build/global-state/routing'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { Button } from 'react-native-paper'
 
-const cookies = () => {
+const termsConditions = () => {
 
     const router = useRouter()
     
@@ -123,7 +123,8 @@ const cookies = () => {
                 
                 <Button style={styles.declineButton}
                     mode="contained"
-                    buttonColor='red'
+                    buttonColor='#FF2D2D'
+                    labelStyle={{ color: 'white' , fontSize: 18, fontWeight: 'bold' }}
                     onPress={() => {
                         router.push('/onboarding1')
                     }}
@@ -133,7 +134,8 @@ const cookies = () => {
 
                 <Button style={styles.acceptButton}
                     mode="contained"
-                    buttonColor='blue'
+                    buttonColor='#0057FF'
+                    labelStyle={{ color: 'white' , fontSize: 18, fontWeight: 'bold' }}
                     onPress={() => {
                         router.push('/login')
                     }}
@@ -148,7 +150,7 @@ const cookies = () => {
   )
 }
 
-export default cookies
+export default termsConditions
 
 const styles = StyleSheet.create({
     safeView: {

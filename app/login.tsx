@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
         height: 50,
         borderRadius: 5,
         marginBottom: 20,
-        backgroundColor: 'blue',
+        backgroundColor: '#0057FF',
     },
     loginButtonText: {
         color: 'white',
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
         height: 50,
         borderRadius: 5,
         marginBottom: 20,
-        backgroundColor: 'blue',
+        backgroundColor: '#0057FF',
     },
     signUpButtonText: {
         color: 'white',
