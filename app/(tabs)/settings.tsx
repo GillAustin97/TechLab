@@ -1,18 +1,27 @@
-import { router } from 'expo-router'
+import { useRouter } from 'expo-router'
 import React from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import { Card, Text, List} from 'react-native-paper'
 
 const settings = () => {
+  const router = useRouter()
+
   return (
     <SafeAreaView style={styles.safeView}>
       <View style={styles.mainContainer}>
-      
-        <TouchableOpacity 
-          style={styles.logoutButton}
-          onPress={() => router.push('/login')}>
-          <Text style={styles.logoutButtonText}>Logout</Text>
-        </TouchableOpacity>
+
+        <Card style={styles.softwareUpdateCard}>
+          <List.Item
+            title="Software Updates"
+            titleStyle={{ color: 'white' }}
+            left={props => <List.Icon {...props} icon="update" />}
+            right={props => <List.Icon {...props} icon="chevron-right" />}
+            onPress={() => router.push('/softwareUpdates')}
+          />
+        </Card>
+
+
 
 
       </View>
@@ -45,5 +54,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     lineHeight: 50,
+  },
+  softwareUpdateCard: {
+    width: 375,
+    marginBottom: 20,
+    backgroundColor: '#1C1C1E',
   },
 })
