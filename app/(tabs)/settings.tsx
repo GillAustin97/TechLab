@@ -75,15 +75,111 @@ const settings = () => {
 
           </Card>
 
+           <Card style={styles.notificationsCard}>
+            <List.Item
+              title="Atlas AI"  
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="robot" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/atlasAI')}
+            />
+
+            <Divider style={styles.dividerLine} />
+
+            <List.Item
+              title="Notifications"
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="bell" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/notifications')}
+            />
+
+            <Divider style={styles.dividerLine} />
+
+            <List.Item
+              title="Sounds"
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="speaker" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/sounds')}
+            />
+
+
+          </Card>
+
+           <Card style={styles.notificationsCard}>
+            <List.Item
+              title="Atlas AI"  
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="robot" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/atlasAI')}
+            />
+
+            <Divider style={styles.dividerLine} />
+
+            <List.Item
+              title="Notifications"
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="bell" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/notifications')}
+            />
+
+            <Divider style={styles.dividerLine} />
+
+            <List.Item
+              title="Sounds"
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="speaker" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/sounds')}
+            />
+
+
+          </Card>
+
+           <Card style={styles.notificationsCard}>
+            <List.Item
+              title="Atlas AI"  
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="robot" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/atlasAI')}
+            />
+
+            <Divider style={styles.dividerLine} />
+
+            <List.Item
+              title="Notifications"
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="bell" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/notifications')}
+            />
+
+            <Divider style={styles.dividerLine} />
+
+            <List.Item
+              title="Sounds"
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="speaker" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/sounds')}
+            />
+
+
+          </Card>
+
         </ScrollView>
 
 
         <Searchbar
           placeholder="Search"
-          style={styles.searchbarContainer}
+          style={[styles.searchbarContainer, {backgroundColor: '#ffffff'}]}
           onChangeText={setSearchQuery}
           value={searchQuery}
-          inputStyle={{ color: 'white' }}
+          inputStyle={{ color: 'black' }}
           right={props => <List.Icon {...props} icon="microphone" />}
         />
 
@@ -145,5 +241,8 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     marginBottom: 2,
     backgroundColor: '#1C1C1E',
+    position: 'absolute',
+    bottom: 0,
+    elevation: 5,
   },
 })
