@@ -1,4 +1,5 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
 import React from 'react';
 
@@ -32,14 +33,16 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <TabBarIcon name="map" color={color} />,
         }}
       />
+
       <Tabs.Screen
-        name="repairBot"
+        name="atlas"
         options={{
           headerShown: false,
-          title: 'Repair Bot',
-          tabBarIcon: ({ color }) => <TabBarIcon name="wrench" color={color} />,
+          title: 'Atlas Chat',
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="robot" size={28} style={{ marginBottom: -3 }} color={color} />,
         }}
       />
+      
       <Tabs.Screen
         name="index"
         options={{

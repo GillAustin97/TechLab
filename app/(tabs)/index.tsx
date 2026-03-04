@@ -1,12 +1,17 @@
 import { StyleSheet } from 'react-native';
 import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
+import { Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function index() {
   return (
-    <View style={styles.mainContainer}>
+    <SafeAreaView style={styles.safeView}>
+      <View style={styles.mainContainer}>
 
-    </View>
+        
+
+      </View>
+    </SafeAreaView>
   );
 }
 

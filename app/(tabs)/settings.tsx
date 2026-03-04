@@ -34,6 +34,16 @@ const settings = () => {
 
           <Card style={styles.notificationsCard}>
             <List.Item
+              title="Atlas AI"  
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="robot" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/atlasAI')}
+            />
+
+            <Divider style={styles.dividerLine} />
+            
+            <List.Item
               title="Notifications"
               titleStyle={{ color: 'white' }}
               left={props => <List.Icon {...props} icon="bell" />}
