@@ -11,7 +11,7 @@ const settings = () => {
   return (
     <SafeAreaView style={styles.safeView}>
       <View style={styles.mainContainer}>
-        <ScrollView>
+        <ScrollView contentContainerStyle={styles.scrollContainer}>
 
           <Card style={styles.techlabAccountCard}>
             <List.Item
@@ -225,7 +225,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#1C1C1E',
     position: 'absolute',
     bottom: 0,
-    elevation: 5,
   },
   aiCard:{
     width: 375,
@@ -241,5 +240,8 @@ const styles = StyleSheet.create({
     width: 375,
     marginBottom: 20,
     backgroundColor: '#1C1C1E',
+  },
+  scrollContainer:{
+    paddingBottom: 60,
   }
 })
