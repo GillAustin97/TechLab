@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const aiChatHistory = () => {
+const atlasChatHistory = () => {
   return (
     <View>
       <Text>aiChatHistory</Text>
@@ -9,6 +9,6 @@ const aiChatHistory = () => {
   )
 }
 
-export default aiChatHistory
+export default atlasChatHistory
 
 const styles = StyleSheet.create({})

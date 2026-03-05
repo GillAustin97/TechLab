@@ -95,15 +95,25 @@ const settings = () => {
             <Divider style={styles.dividerLine} />
 
             <List.Item
+              title="Atlas Chat History"
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="book" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/atlasChatHistory')}
+            />
+
+            <Divider style={styles.dividerLine} />
+
+            <List.Item
               title="Clear Chat History"
               titleStyle={{ color: 'white' }}
               left={props => <List.Icon {...props} icon="delete-outline" />}
               right={props => <List.Icon {...props} icon="chevron-right" />}
-              onPress={() => router.push('/aiChatHistory')}
+              onPress={() => router.push('/deleteChatHistory')}
             />
           </Card>
 
-          <Card style={styles.mainSettingsCard}>
+          <Card style={styles.manualCard}>
             <List.Item
               title="Manual History"
               titleStyle={{ color: 'white' }}
@@ -115,11 +125,11 @@ const settings = () => {
             <Divider style={styles.dividerLine} />
 
             <List.Item
-              title="Sounds"
+              title="Clear Manual History"
               titleStyle={{ color: 'white' }}
-              left={props => <List.Icon {...props} icon="speaker" />}
+              left={props => <List.Icon {...props} icon="delete-outline" />}
               right={props => <List.Icon {...props} icon="chevron-right" />}
-              onPress={() => router.push('/sounds')}
+              onPress={() => router.push('/deleteManualHistory')}
             />
           </Card>
 
@@ -223,6 +233,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#1C1C1E',
   },
   mainSettingsCard:{
+    width: 375,
+    marginBottom: 20,
+    backgroundColor: '#1C1C1E',
+  },
+  manualCard:{
     width: 375,
     marginBottom: 20,
     backgroundColor: '#1C1C1E',
