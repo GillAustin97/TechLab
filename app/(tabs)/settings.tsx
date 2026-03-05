@@ -105,6 +105,26 @@ const settings = () => {
 
           <Card style={styles.mainSettingsCard}>
             <List.Item
+              title="Manual History"
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="book" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/manualHistory')}
+            />
+
+            <Divider style={styles.dividerLine} />
+
+            <List.Item
+              title="Sounds"
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="speaker" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/sounds')}
+            />
+          </Card>
+
+          <Card style={styles.mainSettingsCard}>
+            <List.Item
               title="Notifications"
               titleStyle={{ color: 'white' }}
               left={props => <List.Icon {...props} icon="bell" />}
