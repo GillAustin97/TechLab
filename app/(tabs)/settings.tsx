@@ -82,8 +82,9 @@ const settings = () => {
               right={props => <List.Icon {...props} icon="chevron-right" />}
               onPress={() => router.push('/repairHistory')}
             />
+          </Card>
 
-            <Divider style={styles.dividerLine} />
+          <Card style={styles.aiCard}>
 
             <List.Item
               title="Atlas AI"  
@@ -91,6 +92,16 @@ const settings = () => {
               left={props => <List.Icon {...props} icon="robot" />}
               right={props => <List.Icon {...props} icon="chevron-right" />}
               onPress={() => router.push('/atlasAI')}
+            />
+
+            <Divider style={styles.dividerLine} />
+
+            <List.Item
+              title="Clear Chat History"
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="delete-outline" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/aiChatHistory')}
             />
 
             <Divider style={styles.dividerLine} />
@@ -188,5 +199,10 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 0,
     elevation: 5,
+  },
+  aiCard:{
+    width: 375,
+    marginBottom: 20,
+    backgroundColor: '#1C1C1E',
   },
 })
