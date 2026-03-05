@@ -25,11 +25,21 @@ const settings = () => {
             <Divider style={styles.dividerLine} />
 
             <List.Item
-              title="My Devices "
+              title="Subscriptions"
               titleStyle={{ color: 'white' }}
-              left={props => <List.Icon {...props} icon="devices" />}
+              left={props => <List.Icon {...props} icon="credit-card-outline" />}
               right={props => <List.Icon {...props} icon="chevron-right" />}
-              onPress={() => router.push('/mydevices')}
+              onPress={() => router.push('/subscriptions')}
+            />
+
+            <Divider style={styles.dividerLine} />
+
+            <List.Item
+              title="Password and Security"
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="lock" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/passwordSecurity')}
             />
           </Card>
 
@@ -44,6 +54,37 @@ const settings = () => {
           </Card>
 
           <Card style={styles.notificationsCard}>
+
+            <List.Item
+              title="My Devices "
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="devices" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/mydevices')}
+            />
+
+            <Divider style={styles.dividerLine} />
+
+            <List.Item
+              title="Add Devices"  
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="plus" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/addDevices')}
+            />
+
+            <Divider style={styles.dividerLine} />
+
+            <List.Item
+              title="Device Repair History"  
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="wrench" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/repairHistory')}
+            />
+
+            <Divider style={styles.dividerLine} />
+
             <List.Item
               title="Atlas AI"  
               titleStyle={{ color: 'white' }}
