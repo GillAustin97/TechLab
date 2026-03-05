@@ -153,6 +153,50 @@ const settings = () => {
             />
           </Card>
 
+          <Card style={styles.mainSettingsCard}>
+            <List.Item
+              title="About"
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="information-outline" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/aboutTechLab')}
+            />
+
+            <Divider style={styles.dividerLine} />
+
+            <List.Item
+              title="Privacy Policy"
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="file" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/privacyPolicy')}
+            />
+
+            <Divider style={styles.dividerLine} />
+
+            <List.Item
+              title="Terms and Conditions"
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="file" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/termsAndConditions')}
+            />
+
+            <Divider style={styles.dividerLine} />
+
+            <List.Item
+              title="Version"
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="package" />}
+              right={() => (
+                <View style={styles.versionCard}>
+                    <Text style={styles.versionCardText}>0.0.0.1</Text>
+                    <List.Icon icon="chevron-right" />
+                </View>
+              )}
+            />
+          </Card>
+
           
         </ScrollView>
 
@@ -243,5 +287,13 @@ const styles = StyleSheet.create({
   },
   scrollContainer:{
     paddingBottom: 60,
-  }
+  },
+  versionCard:{
+    flexDirection: 'row', 
+    alignItems: 'center',
+  },
+  versionCardText:{
+    color: "gray",
+    marginRight: 10,
+  },
 })
