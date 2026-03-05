@@ -54,7 +54,6 @@ const settings = () => {
           </Card>
 
           <Card style={styles.notificationsCard}>
-
             <List.Item
               title="My Devices "
               titleStyle={{ color: 'white' }}
@@ -85,7 +84,6 @@ const settings = () => {
           </Card>
 
           <Card style={styles.aiCard}>
-
             <List.Item
               title="Atlas AI"  
               titleStyle={{ color: 'white' }}
@@ -103,9 +101,9 @@ const settings = () => {
               right={props => <List.Icon {...props} icon="chevron-right" />}
               onPress={() => router.push('/aiChatHistory')}
             />
+          </Card>
 
-            <Divider style={styles.dividerLine} />
-
+          <Card style={styles.mainSettingsCard}>
             <List.Item
               title="Notifications"
               titleStyle={{ color: 'white' }}
@@ -127,7 +125,6 @@ const settings = () => {
 
           
         </ScrollView>
-
 
         <Searchbar
           placeholder="Search"
@@ -205,4 +202,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     backgroundColor: '#1C1C1E',
   },
+  mainSettingsCard:{
+    width: 375,
+    marginBottom: 20,
+    backgroundColor: '#1C1C1E',
+  }
 })
