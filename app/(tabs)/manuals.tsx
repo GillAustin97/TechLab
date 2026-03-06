@@ -1,16 +1,40 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
-import { Searchbar, List } from 'react-native-paper'
 import { useRouter } from 'expo-router'
+import React from 'react'
+import { StyleSheet, View } from 'react-native'
+import { List, Searchbar } from 'react-native-paper'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 const manuals = () => {
   const router = useRouter()
   const [searchQuery, setSearchQuery] = React.useState('');
+
+  //array list of computer brands and computer hardware
+  const computerBrands = [
+    {id: '1', name:'Apple', manuals: 125},
+    {id: '2', name:'Dell', manuals: 125},
+    {id: '3', name:'HP', manuals: 125},
+    {id: '4', name:'Lenovo', manuals: 125},
+    {id: '5', name:'ASUS', manuals: 125},
+    {id: '6', name:'Acer', manuals: 125},
+    {id: '7', name:'MSI', manuals: 125},
+    {id: '8', name:'Samsung', manuals: 125},
+    {id: '9', name:'LG', manuals: 125},
+    {id: '10', name:'Microsoft', manuals: 125},
+    {id: '11', name:'Razer', manuals: 125},
+    {id: '12', name:'Huawei', manuals: 125},
+    {id: '13', name:'Toshiba', manuals: 125},
+    {id: '14', name:'Sony', manuals: 125},
+    {id: '15', name:'Fujitsu', manuals: 125},
+
+  ]
   
   return (
     <SafeAreaView style={styles.safeView}>
       <View style={styles.mainContainer}>
+
+
+
+
         
 
         <Searchbar
