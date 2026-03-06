@@ -189,6 +189,16 @@ const settings = () => {
             <Divider style={styles.dividerLine} />
 
             <List.Item
+              title="Feedback"
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="message-text-outline" />}
+              right={props => <List.Icon {...props} icon="chevron-right" />}
+              onPress={() => router.push('/feedback')}
+            />
+
+            <Divider style={styles.dividerLine} />
+
+            <List.Item
               title="Terms and Conditions"
               titleStyle={{ color: 'white' }}
               left={props => <List.Icon {...props} icon="file" />}
