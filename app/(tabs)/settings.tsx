@@ -2,11 +2,12 @@ import { useRouter } from 'expo-router'
 import React from 'react'
 import { StyleSheet, TouchableOpacity, View, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { Card, Text, List, Divider, Searchbar } from 'react-native-paper'
+import { Card, Text, List, Divider, Searchbar, Switch } from 'react-native-paper'
 
 const settings = () => {
   const router = useRouter()
   const [searchQuery, setSearchQuery] = React.useState('');
+  const [darkMode, setDarkMode] = React.useState(false);
 
   return (
     <SafeAreaView style={styles.safeView}>
@@ -140,6 +141,19 @@ const settings = () => {
               left={props => <List.Icon {...props} icon="bell" />}
               right={props => <List.Icon {...props} icon="chevron-right" />}
               onPress={() => router.push('/notifications')}
+            />
+
+            <Divider style={styles.dividerLine} />
+
+            <List.Item
+              title="Dark Mode"
+              titleStyle={{ color: 'white' }}
+              left={props => <List.Icon {...props} icon="theme-light-dark" />}
+              right={props => <Switch
+              value={darkMode}
+              onValueChange={(value) => setDarkMode(value)}
+              />}
+              onPress={() => router.push('/sounds')}
             />
 
             <Divider style={styles.dividerLine} />
