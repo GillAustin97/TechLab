@@ -2,7 +2,7 @@ import { useRouter } from 'expo-router'
 import React from 'react'
 import { StyleSheet, TouchableOpacity, View, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { Card, Text, List, Divider, Searchbar} from 'react-native-paper'
+import { Card, Text, List, Divider, Searchbar } from 'react-native-paper'
 
 const settings = () => {
   const router = useRouter()
@@ -197,6 +197,11 @@ const settings = () => {
             />
           </Card>
 
+          <TouchableOpacity 
+            style={styles.logoutButton}
+            onPress={() => router.push('/login')}>
+            <Text style={styles.logoutButtonText}>Logout</Text>
+          </TouchableOpacity>
           
         </ScrollView>
 
@@ -232,6 +237,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginBottom: 20,
     backgroundColor: 'red',
+    alignSelf:'center',
   },
   logoutButtonText: {
     color: 'white',
