@@ -4,11 +4,7 @@ import { StyleSheet, View } from 'react-native'
 import { List, Searchbar } from 'react-native-paper'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-const manuals = () => {
-  const router = useRouter()
-  const [searchQuery, setSearchQuery] = React.useState('');
-
-  //array list of computer brands and computer hardware
+//array list of computer brands and computer hardware
   const computerBrands = [
     {id: '1', name:'Apple', manuals: 125},
     {id: '2', name:'Dell', manuals: 125},
@@ -27,10 +23,19 @@ const manuals = () => {
     {id: '15', name:'Fujitsu', manuals: 125},
 
   ]
+
+const manuals = () => {
+  const router = useRouter()
+  const [searchQuery, setSearchQuery] = React.useState('');
+
+  
   
   return (
     <SafeAreaView style={styles.safeView}>
       <View style={styles.mainContainer}>
+
+
+        
 
 
 
