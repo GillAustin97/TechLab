@@ -1,7 +1,8 @@
 import { useRouter } from 'expo-router'
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
-import { List, Searchbar } from 'react-native-paper'
+import { StyleSheet, TouchableOpacity, View, FlatList } from 'react-native'
+import { Card, List, Searchbar } from 'react-native-paper'
+import { Item } from 'react-native-paper/lib/typescript/components/Drawer/Drawer'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 //array list of computer brands and computer hardware
@@ -21,24 +22,35 @@ import { SafeAreaView } from 'react-native-safe-area-context'
     {id: '13', name:'Toshiba', manuals: 125},
     {id: '14', name:'Sony', manuals: 125},
     {id: '15', name:'Fujitsu', manuals: 125},
-
   ]
 
 const manuals = () => {
   const router = useRouter()
   const [searchQuery, setSearchQuery] = React.useState('');
 
+  const displayComputerBrands =({ Item }: any) =>{
+    return (
+      <TouchableOpacity
+      onPress={ () => 
+      router.push('/manuals')}>
+
+        <Card style={styles.computerBrandsCard}>
+          <Card.Title title={Item.name} />
+          <Card.Content>
+            <List.Item title={`${Item.manuals} manuals`} />
+          </Card.Content>
+        </Card>
+
+      </TouchableOpacity>
+
+    )
+  }
+
   
   
   return (
     <SafeAreaView style={styles.safeView}>
       <View style={styles.mainContainer}>
-
-
-        
-
-
-
 
         
 
@@ -76,4 +88,12 @@ const styles = StyleSheet.create({
     bottom: 0,
     elevation: 5,
   },
+  computerBrandsCard:{
+    width:100,
+    height:100,
+    margin:10,
+    backgroundColor: "black",
+    borderRadius:15,
+    justifyContent: 'center',
+  }
 })
