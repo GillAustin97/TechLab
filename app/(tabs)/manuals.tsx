@@ -34,12 +34,16 @@ const manuals = () => {
       onPress={ () => 
       router.push('/manuals')}>
 
+
+
         <Card style={styles.computerBrandsCard}>
           <Card.Title title={Item.name} />
           <Card.Content>
             <List.Item title={`${Item.manuals} manuals`} />
           </Card.Content>
         </Card>
+
+
 
       </TouchableOpacity>
 
