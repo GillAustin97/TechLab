@@ -41,7 +41,7 @@ const manuals = () => {
 
             <Text style={styles.computerBrandTitle}>{item.name}</Text>
 
-            <Text style={styles.computerBrandSmallText}>{item.name} manuals </Text>
+            <Text style={styles.computerBrandSmallText}>{item.manuals} manuals </Text>
           
           </Card.Content>
 
@@ -100,11 +100,13 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   computerBrandsCard:{
-    width:100,
-    height:100,
+    width:150,
+    height:120,
     margin:10,
-    backgroundColor: 'black',
+    backgroundColor: '#444444',
     borderRadius:15,
+    borderWidth: 2,
+    borderColor:'white',
     justifyContent: 'center',
   },
   computerBrandContent:{
