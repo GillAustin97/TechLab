@@ -3,6 +3,7 @@ import React from 'react'
 import { StyleSheet, TouchableOpacity, View, Text } from 'react-native'
 import { Card, List, Searchbar } from 'react-native-paper'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import { FlatList } from 'react-native'
 
 //array list of computer brands and computer hardware
   const computerBrands = [
@@ -43,7 +44,7 @@ const manuals = () => {
             <Text style={styles.computerBrandSmallText}>{item.name} manuals </Text>
           
           </Card.Content>
-          
+
         </Card>
       </TouchableOpacity>
     )
@@ -55,8 +56,15 @@ const manuals = () => {
     <SafeAreaView style={styles.safeView}>
       <View style={styles.mainContainer}>
 
-        
+        <FlatList
+          data={computerBrands}
+          renderItem={displayComputerBrands}
+          keyExtractor={(item) => item.id}
+          numColumns={2}
+          contentContainerStyle={styles.grid}
+        />
 
+        
         <Searchbar
           placeholder="Search"
           style={[styles.searchbarContainer, {backgroundColor: '#ffffff'}]}
@@ -111,5 +119,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     marginTop: 8,
+  },
+  grid:{
+    paddingBottom:40,
   }
 })
