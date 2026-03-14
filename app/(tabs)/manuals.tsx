@@ -31,18 +31,19 @@ const manuals = () => {
     return (
       <TouchableOpacity
        onPress={() => router.push(`/manualBrand/${item.name}`)}>
+
         <Card style={styles.computerBrandsCard}>
+
           <Card.Content style={styles.computerBrandContent}>
 
             <List.Icon icon="laptop" color="White"/>
 
             <Text style={styles.computerBrandTitle}>{item.name}</Text>
 
-            <Text style={styles.computerBrandSmallText}>{item.name} manuals</Text>
-
-            
+            <Text style={styles.computerBrandSmallText}>{item.name} manuals </Text>
           
           </Card.Content>
+          
         </Card>
       </TouchableOpacity>
     )
