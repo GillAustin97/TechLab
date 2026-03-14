@@ -1,8 +1,7 @@
 import { useRouter } from 'expo-router'
 import React from 'react'
-import { StyleSheet, TouchableOpacity, View, FlatList } from 'react-native'
+import { StyleSheet, TouchableOpacity, View, Text } from 'react-native'
 import { Card, List, Searchbar } from 'react-native-paper'
-import { Item } from 'react-native-paper/lib/typescript/components/Drawer/Drawer'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 //array list of computer brands and computer hardware
@@ -28,25 +27,24 @@ const manuals = () => {
   const router = useRouter()
   const [searchQuery, setSearchQuery] = React.useState('');
 
-  const displayComputerBrands =({ Item }: any) =>{
+  const displayComputerBrands =({ item }: any) =>{
     return (
       <TouchableOpacity
-      onPress={ () => 
-      router.push('/manuals')}>
-
-
-
+       onPress={() => router.push(`/manualBrand/${item.name}`)}>
         <Card style={styles.computerBrandsCard}>
-          <Card.Title title={Item.name} />
-          <Card.Content>
-            <List.Item title={`${Item.manuals} manuals`} />
+          <Card.Content style={styles.computerBrandContent}>
+
+            <List.Icon icon="laptop" color="White"/>
+
+            <Text style={styles.computerBrandTitle}>{item.name}</Text>
+
+            <Text style={styles.computerBrandSmallText}>{item.name} manuals</Text>
+
+            
+          
           </Card.Content>
         </Card>
-
-
-
       </TouchableOpacity>
-
     )
   }
 
@@ -96,8 +94,21 @@ const styles = StyleSheet.create({
     width:100,
     height:100,
     margin:10,
-    backgroundColor: "black",
+    backgroundColor: 'black',
     borderRadius:15,
     justifyContent: 'center',
+  },
+  computerBrandContent:{
+    alignItems: 'center',
+  },
+  computerBrandSmallText:{
+    color:'gray',
+    fontSize: 10,
+  },
+  computerBrandTitle: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginTop: 8,
   }
 })
