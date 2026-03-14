@@ -1,11 +1,12 @@
-import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Tabs } from 'expo-router';
 import React from 'react';
 
 import { useClientOnlyValue } from '@/components/useClientOnlyValue';
 import { useColorScheme } from '@/components/useColorScheme';
 import Colors from '@/constants/Colors';
+import { IconButton } from 'react-native-paper';
 
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
@@ -45,8 +46,16 @@ export default function TabLayout() {
       <Tabs.Screen
         name="atlas"
         options={{
-          headerShown: false,
-          title: 'Atlas Chat',
+          headerShown: true,
+          title: 'Atlas 1.0v',
+          tabBarLabel:'Atlas',
+          headerLeft: () => (
+        <IconButton
+          icon="menu"
+          iconColor="black"
+          onPress={() => console.log("menu pressed")}
+          />
+        ),
           tabBarIcon: ({ color }) => <MaterialCommunityIcons name="robot" size={28} style={{ marginBottom: -3 }} color={color} />,
         }}
       />
