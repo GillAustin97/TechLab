@@ -39,9 +39,19 @@ export default function TabLayout() {
         options={{
           headerShown: true,
           title: 'Maps',
+          headerLeft: () => (
+        <IconButton
+          icon="menu"
+          iconColor="white"
+          onPress={() => console.log("menu pressed")}
+          />
+        ),
           tabBarIcon: ({ color }) => <TabBarIcon name="map" color={color} />,
           headerStyle: {
             backgroundColor: 'black',
+          },
+          headerTitleStyle:{
+            color:'white',
           },
         }}
       />
@@ -55,11 +65,17 @@ export default function TabLayout() {
           headerLeft: () => (
         <IconButton
           icon="menu"
-          iconColor="black"
+          iconColor="white"
           onPress={() => console.log("menu pressed")}
           />
         ),
           tabBarIcon: ({ color }) => <MaterialCommunityIcons name="robot" size={28} style={{ marginBottom: -3 }} color={color} />,
+          headerStyle: {
+            backgroundColor: 'black',
+          },
+          headerTitleStyle: {
+            color: 'white',
+          },
         }}
       />
       
