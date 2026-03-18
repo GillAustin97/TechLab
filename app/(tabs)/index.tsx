@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, ScrollView} from 'react-native';
 import EditScreenInfo from '@/components/EditScreenInfo';
 import { Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -11,42 +11,42 @@ export default function index() {
       <View style={styles.mainContainer}>
 
       <Text style={styles.supportTitle}>My Devices</Text>
+        <ScrollView>
+          <View style={styles.horizontalScrollRow}>
+            <Card style={styles.myDevicesCard}>
+                <List.Item
+                  title="Techlab Account"
+                  titleStyle={{ color: 'white' }}
+                  onPress={() => router.push('/techlabAccount')}
+                />
+            </Card>
 
-        <View style={styles.horizontalScrollRow}>
-          <Card style={styles.myDevicesCard}>
-              <List.Item
-                title="Techlab Account"
-                titleStyle={{ color: 'white' }}
-                onPress={() => router.push('/techlabAccount')}
-              />
-          </Card>
+            <Card style={styles.myDevicesCard}>
+                <List.Item
+                  title="Techlab Account"
+                  titleStyle={{ color: 'white' }}
+                  onPress={() => router.push('/techlabAccount')}
+                />
+            </Card>
 
-          <Card style={styles.myDevicesCard}>
-              <List.Item
-                title="Techlab Account"
-                titleStyle={{ color: 'white' }}
-                onPress={() => router.push('/techlabAccount')}
-              />
-          </Card>
+            <Card style={styles.myDevicesCard}>
+                <List.Item
+                  title="Techlab Account"
+                  titleStyle={{ color: 'white' }}
+                  onPress={() => router.push('/techlabAccount')}
+                />
+            </Card>
 
-          <Card style={styles.myDevicesCard}>
-              <List.Item
-                title="Techlab Account"
-                titleStyle={{ color: 'white' }}
-                onPress={() => router.push('/techlabAccount')}
-              />
-          </Card>
-
-          <Card style={styles.myDevicesCard}>
-              <List.Item
-                title="Techlab Account"
-                titleStyle={{ color: 'white' }}
-                onPress={() => router.push('/techlabAccount')}
-              />
-          </Card>
-        </View>
+            <Card style={styles.myDevicesCard}>
+                <List.Item
+                  title="Techlab Account"
+                  titleStyle={{ color: 'white' }}
+                  onPress={() => router.push('/techlabAccount')}
+                />
+            </Card>
+          </View>
+        </ScrollView>
         
-
       </View>
     </SafeAreaView>
   );
