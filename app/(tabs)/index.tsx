@@ -11,7 +11,11 @@ export default function index() {
       <View style={styles.mainContainer}>
 
       <Text style={styles.supportTitle}>My Devices</Text>
-        <ScrollView>
+        <ScrollView 
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={styles.horizontalScrollRow}
+        >
           <View style={styles.horizontalScrollRow}>
             <Card style={styles.myDevicesCard}>
                 <List.Item
