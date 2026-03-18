@@ -78,7 +78,7 @@ export default function index() {
               </View>
           </ScrollView>
 
-            <Text style={styles.supportTitleText}>Tools</Text>
+            <Text style={styles.supportTitleText}>Recent Activity</Text>
             <ScrollView 
             horizontal
             showsHorizontalScrollIndicator={false}
@@ -103,7 +103,7 @@ export default function index() {
               </View>
           </ScrollView>
 
-            <Text style={styles.supportTitleText}>Tools</Text>
+            <Text style={styles.supportTitleText}>Recent Manuals</Text>
             <ScrollView 
             horizontal
             showsHorizontalScrollIndicator={false}

@@ -5,7 +5,6 @@ import MapView from 'react-native-maps'
 
 const maps = () => {
   return (
-    <SafeAreaView style={styles.safeView}>
       <View style={styles.mainContainer}>
         <MapView
         style={styles.map}
@@ -17,18 +16,12 @@ const maps = () => {
         }}
       />
       </View>
-    </SafeAreaView>
-    
   )
 }
 
 export default maps
 
 const styles = StyleSheet.create({
-  safeView: {
-    flex: 1,
-    backgroundColor: 'black',
-  },
   mainContainer: {
     flex: 1,
   },
