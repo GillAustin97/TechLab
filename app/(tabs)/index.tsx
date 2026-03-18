@@ -10,47 +10,125 @@ export default function index() {
     <SafeAreaView style={styles.safeView}>
       <View style={styles.mainContainer}>
 
-      <Text style={styles.supportTitle}>My Devices</Text>
-        <ScrollView 
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        contentContainerStyle={styles.horizontalScrollRow}
-        >
-          <View style={styles.horizontalScrollRow}>
-            <Card style={styles.myDevicesCard}>
-                <List.Item
-                  title="Techlab Account"
-                  titleStyle={{ color: 'white' }}
-                  onPress={() => router.push('/techlabAccount')}
-                />
-            </Card>
+        <ScrollView style={styles.verticalScrollView}>
 
-            <Card style={styles.myDevicesCard}>
-                <List.Item
-                  title="Techlab Account"
-                  titleStyle={{ color: 'white' }}
-                  onPress={() => router.push('/techlabAccount')}
-                />
-            </Card>
+            <Text style={styles.supportTitleText}>My Devices</Text>
+          <ScrollView 
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.horizontalScrollRow}
+            >
+              <View style={styles.horizontalScrollRow}>
+                <Card style={styles.supportCards}>
+                    <List.Item
+                      title="iPhone"
+                      titleStyle={{ color: 'white' }}
+                      onPress={() => router.push('/techlabAccount')}
+                    />
+                </Card>
 
-            <Card style={styles.myDevicesCard}>
-                <List.Item
-                  title="Techlab Account"
-                  titleStyle={{ color: 'white' }}
-                  onPress={() => router.push('/techlabAccount')}
-                />
-            </Card>
+                <Card style={styles.supportCards}>
+                    <List.Item
+                      title="Tablet"
+                      titleStyle={{ color: 'white' }}
+                      onPress={() => router.push('/techlabAccount')}
+                    />
+                </Card>
 
-            <Card style={styles.myDevicesCard}>
-                <List.Item
-                  title="Techlab Account"
-                  titleStyle={{ color: 'white' }}
-                  onPress={() => router.push('/techlabAccount')}
-                />
-            </Card>
-          </View>
+                <Card style={styles.supportCards}>
+                    <List.Item
+                      title="AirPods"
+                      titleStyle={{ color: 'white' }}
+                      onPress={() => router.push('/techlabAccount')}
+                    />
+                </Card>
+
+                <Card style={styles.supportCards}>
+                    <List.Item
+                      title="Raider GE78"
+                      titleStyle={{ color: 'white' }}
+                      onPress={() => router.push('/techlabAccount')}
+                    />
+                </Card>
+              </View>
+            </ScrollView>
+
+              <Text style={styles.supportTitleText}>Tools</Text>
+            <ScrollView 
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.horizontalScrollRow}
+            >
+              <View style={styles.horizontalScrollRow}>
+                <Card style={styles.supportCards}>
+                    <List.Item
+                      title="Warranty"
+                      titleStyle={{ color: 'white' }}
+                      onPress={() => router.push('/techlabAccount')}
+                    />
+                </Card>
+
+                <Card style={styles.supportCards}>
+                    <List.Item
+                      title="Techlab Account"
+                      titleStyle={{ color: 'white' }}
+                      onPress={() => router.push('/techlabAccount')}
+                    />
+                </Card>
+              </View>
+          </ScrollView>
+
+            <Text style={styles.supportTitleText}>Tools</Text>
+            <ScrollView 
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.horizontalScrollRow}
+            >
+              <View style={styles.horizontalScrollRow}>
+                <Card style={styles.supportCards}>
+                    <List.Item
+                      title="Warranty"
+                      titleStyle={{ color: 'white' }}
+                      onPress={() => router.push('/techlabAccount')}
+                    />
+                </Card>
+
+                <Card style={styles.supportCards}>
+                    <List.Item
+                      title="Techlab Account"
+                      titleStyle={{ color: 'white' }}
+                      onPress={() => router.push('/techlabAccount')}
+                    />
+                </Card>
+              </View>
+          </ScrollView>
+
+            <Text style={styles.supportTitleText}>Tools</Text>
+            <ScrollView 
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.horizontalScrollRow}
+            >
+              <View style={styles.horizontalScrollRow}>
+                <Card style={styles.supportCards}>
+                    <List.Item
+                      title="Warranty"
+                      titleStyle={{ color: 'white' }}
+                      onPress={() => router.push('/techlabAccount')}
+                    />
+                </Card>
+
+                <Card style={styles.supportCards}>
+                    <List.Item
+                      title="Techlab Account"
+                      titleStyle={{ color: 'white' }}
+                      onPress={() => router.push('/techlabAccount')}
+                    />
+                </Card>
+              </View>
+          </ScrollView>
+
         </ScrollView>
-        
       </View>
     </SafeAreaView>
   );
@@ -68,7 +146,10 @@ const styles = StyleSheet.create({
   horizontalScrollRow:{
     flexDirection:'row',
   },
-  myDevicesCard:{
+  verticalScrollView:{
+    paddingBottom: 20,
+  },
+  supportCards:{
     width: 200,
     height: 100,
     marginTop: 20,
@@ -79,8 +160,10 @@ const styles = StyleSheet.create({
     borderColor: 'white',
     marginRight:10,
   },
-  supportTitle:{
-
+  supportTitleText:{
+    color:'white',
+    fontSize: 25,
+    fontWeight: 'bold',
   },
 
 });
