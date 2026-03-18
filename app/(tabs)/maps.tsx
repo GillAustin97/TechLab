@@ -7,7 +7,15 @@ const maps = () => {
   return (
     <SafeAreaView style={styles.safeView}>
       <View style={styles.mainContainer}>
-        <Text>maps</Text>
+        <MapView
+        style={styles.map}
+        initialRegion={{
+          latitude: 28.5383,
+          longitude: -81.3792,
+          latitudeDelta: 0.05,
+          longitudeDelta: 0.05,
+        }}
+      />
       </View>
     </SafeAreaView>
     
@@ -23,7 +31,8 @@ const styles = StyleSheet.create({
   },
   mainContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
+  map:{
+    flex: 1,
+  }
 })
