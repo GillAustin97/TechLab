@@ -1,18 +1,24 @@
-import { StyleSheet, TextInput, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
+import { TextInput } from 'react-native-paper'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 const atlas = () => {
   return (
     <SafeAreaView style={styles.safeView}>
       <View style={styles.mainContainer}>
 
-        <TextInput 
+        <TextInput style={styles.inputMessageContainer}
         placeholder='Ask Atlas'
-        style={styles.inputMessageContainer}
-        >
-
-        </TextInput>
+        textColor='black'
+        right={
+          <TextInput.Icon
+          icon='send'
+          color='black'
+          />
+        }
+        />
         
       </View>
     </SafeAreaView>
@@ -28,18 +34,17 @@ const styles = StyleSheet.create({
   },
   mainContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   inputMessageContainer:{
     width:350,
     height:50,
-    backgroundColor:'#8f8f8f',
-    borderRadius: 5,
+    backgroundColor:'#ffffff',
+    borderRadius: 20,
     borderColor: 'black',
-    borderWidth: 1,
+    borderWidth: 2,
     position: 'absolute',
     bottom: 5,
     right: 10,
+    padding: 10,
   },
 })
