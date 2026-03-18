@@ -63,9 +63,16 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          headerShown: false,
-          title: 'Home',
+          headerShown: true,
+          title: 'TechLab Support',
+          tabBarLabel:'Home',
           tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
+          headerStyle: {
+            backgroundColor: 'black',
+          },
+          headerTitleStyle: {
+            color: 'white',
+          },
         }}
       />
       <Tabs.Screen
